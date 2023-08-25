@@ -56,7 +56,7 @@ pipeline {
           sh "sed -i 's,java-web-app,alaouiyoussef/myrepo:$BUILD_NUMBER,' deployment.yaml"
           sh "cat deployment.yaml"
           sh "kubectl  get pods"
-          sh "kubectl -f deployment.yaml"
+          sh "kubectl apply -f deployment.yaml"
         }
       }
     }
