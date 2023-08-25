@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh 'pwd'
         withSonarQubeEnv('MySonarQube') {
-          sh 'mvn clean install package'
+          sh 'mvn -s settings.xml clean install package'
         }
       }
     }
