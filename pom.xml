@@ -1,17 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
   <version>3.1.0-SNAPSHOT</version>
 
-  <!-- ... Parent, properties, dependencies, etc. ... -->
+  <!-- Parent, properties, dependencies, and other configurations -->
 
   <build>
     <plugins>
-      <!-- ... Other plugins ... -->
+      <!-- Maven Enforcer Plugin configuration -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <!-- ... Existing configuration ... -->
+      </plugin>
 
-      <!-- Add the Maven Compiler Plugin configuration to use Java 17 -->
+      <!-- Maven Dependency Plugin configuration to skip the generation of dependency-reduced-pom.xml -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.2.0</version> <!-- Use the appropriate version -->
+        <executions>
+          <execution>
+            <id>dependency-reduced-pom</id>
+            <phase>none</phase> <!-- Skip the execution phase -->
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Maven Compiler Plugin configuration -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -21,9 +41,12 @@
           <target>17</target> <!-- Update to Java 17 -->
         </configuration>
       </plugin>
+
+      <!-- Other plugins as needed -->
+
     </plugins>
   </build>
 
-  <!-- ... Repositories, profiles, licenses, etc. ... -->
+  <!-- Dependencies, repositories, profiles, licenses, etc. -->
 
 </project>
