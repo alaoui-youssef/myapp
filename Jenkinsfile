@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh 'pwd'
         withSonarQubeEnv('MySonarQube') {
-          sh 'mvn clean package sonar:sonar'
+          sh 'mvn package sonar:sonar'
         }
       }
     }
