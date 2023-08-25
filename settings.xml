@@ -22,13 +22,13 @@
           </snapshots>
           <id>central</id>
           <name>repo-vir</name>
-          <url>https://34.16.184.43:8081/artifactory/repo-vir</url>
+          <url>http://34.16.184.43:8081/artifactory/repo-vir</url>
         </repository>
         <repository>
           <snapshots />
           <id>snapshots</id>
           <name>repo-vir</name>
-          <url>https://34.16.184.43:8081/artifactory/repo-vir</url>
+          <url>http://34.16.184.43:8081/artifactory/repo-vir</url>
         </repository>
       </repositories>
       <pluginRepositories>
@@ -38,13 +38,13 @@
           </snapshots>
           <id>central</id>
           <name>repo-vir</name>
-          <url>https://34.16.184.43:8081/artifactory/repo-vir</url>
+          <url>http://34.16.184.43:8081/artifactory/repo-vir</url>
         </pluginRepository>
         <pluginRepository>
           <snapshots />
           <id>snapshots</id>
           <name>repo-vir</name>
-          <url>https://34.16.184.43:8081/artifactory/repo-vir</url>
+          <url>http://34.16.184.43:8081/artifactory/repo-vir</url>
         </pluginRepository>
       </pluginRepositories>
       <id>artifactory</id>
