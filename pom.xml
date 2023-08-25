@@ -9,25 +9,17 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <!-- ... Existing configuration ... -->
-      </plugin>
-
       <!-- ... Other plugins ... -->
 
-      <!-- Add the Maven Dependency Plugin configuration to skip the generation of dependency-reduced-pom.xml -->
+      <!-- Add the Maven Compiler Plugin configuration to use Java 17 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.2.0</version> <!-- Use the appropriate version -->
-        <executions>
-          <execution>
-            <id>dependency-reduced-pom</id>
-            <phase>none</phase> <!-- Skip the execution phase -->
-          </execution>
-        </executions>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version> <!-- Use the appropriate version -->
+        <configuration>
+          <source>17</source> <!-- Update to Java 17 -->
+          <target>17</target> <!-- Update to Java 17 -->
+        </configuration>
       </plugin>
     </plugins>
   </build>
