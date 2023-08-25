@@ -19,7 +19,7 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls -la'
-        sh 'mv target/*.jar java-web-app.jar'
+       // sh 'mv target/*.jar java-web-app.jar'
         sh 'cp -r java-web-app.jar docker'
       }
     }
@@ -56,7 +56,7 @@ pipeline {
           sh "sed -i 's,java-web-app,alaouiyoussef/myrepo:$BUILD_NUMBER,' deployment.yaml"
           sh "cat deployment.yaml"
           sh "kubectl  get pods"
-          sh "kubectl  deployment.yaml"
+          sh "kubectl apply -f deployment.yaml"
         }
       }
     }

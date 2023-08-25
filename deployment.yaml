@@ -36,7 +36,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: your-java-web-app-image:tag  # Replace with your actual image name and tag
+      - image: java-web-app # Replace with your actual image name and tag
         name: test-image
         ports:
         - containerPort: 8080
